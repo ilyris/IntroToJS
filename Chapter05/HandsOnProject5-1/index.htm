@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 5
+      Hands-on Project 5-1
+
+      Author: dylan
+      Date:   02/26/19
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hands-on Project 5-1</title>
+</head>
+
+<body>
+   <h1>
+      Hands-on Project 5-1
+   </h1>
+   
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+
+
+   <script>
+   'use strict';
+   document.getElementsByTagName('p')[0].innerHTML = "Web browser name: " + navigator.appName;
+   document.getElementsByTagName('p')[1].innerHTML = "Web browser version: " + navigator.appVersion;
+   document.getElementsByTagName('p')[2].innerHTML = "Operating platform: " + navigator.platform;
+   document.getElementsByTagName('p')[3].innerHTML = "User agent: " + navigator.userAgent;
+   </script>
+
+
+   A) for each of the four properties the information returned was accurate and between using ghoogle chrome and firefox the information was relatively similar with a little bit of
+   extra information from google chrome browser in the user agent section and the web browser version section
+
+   B) The same properties were the Operating platform and the web browser name. the different properties was the user agent
+    and the web browser versionm as they were both 5.0 but google gave a lot of additional information.
+
+    C) the challenges I see with using these properties to tell which browser were in is, when i was on google chrome the web browser version gave information about AppleKit and Safari.
+    Which threw me off a little bit since were using google chrome, firefox didn't have the issue with the browser version. 
+    I think the operating platform prroperty, and the web browser version are great properties as we can see how up to date their OS is, which BIT it is, and we can see what browser / current version they are using.
+    This is pretty handy for debugging, because not everything is supported in every browser, and some browsers have their own underlying issues.
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 3
+      Hands-on Project 3-4
+
+      Author: Dylan
+      Date:   02/18/19
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 3-5</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 3-5
+      </h1>
+   </header>
+
+   <article>
+      <div id="results">
+          <ul>
+             <li id="item1"></li>
+             <li id="item2"></li>
+             <li id="item3"></li>
+             <li id="item4"></li>
+             <li id="item5"></li>
+          </ul>
+          <p id="resultsExpl"></p>
+      </div>
+      <form>
+          <fieldset>
+            <label for="toolBox" id="placeLabel">
+              Type the name of a tool, then click Submit:
+            </label>
+            <input type="text" id="toolBox" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="button">Submit</button>
+          </fieldset>
+      </form>
+   </article>
+   <script>
+      var i = 1;
+      var listItem = '';
+
+      function processInput() {
+         // assign our variables we will be using
+         var button = document.getElementById('button');
+         var toolbox = document.getElementById('toolBox');
+         // check if i is less then or = to 5, if so run code below
+      //    if(i <= 5) {
+      //       //set the listItem to match the ID
+      //       listItem =  "item" + i;
+      //       //grab every element on each pass that has the id of the listItem value
+      //       document.getElementById(listItem).innerHTML = toolBox.value;
+      //       // set the toolbox input to be empty when were done
+      //       toolBox.value = '';
+
+      //       if(i == 5) {
+      //          // print a message when every LI has been filled
+      //          document.getElementById('resultsExpl').innerHTML = "Thanks for your suggestions";
+      //       }
+      //       i++;
+      //    }
+      // }
+
+// switch statement for 3-5
+         switch(i <= 6) {
+            case i <= 5:
+            console.log(i);
+            listItem = 'item' + i;
+            document.getElementById(listItem).innerHTML = toolBox.value;
+            toolBox.value = '';
+            break;
+
+            default:
+            console.log(i);
+            document.getElementById('resultsExpl').innerHTML = "Thanks for your suggestions";
+         }
+         i++;
+      }
+      if(button.addEventListener) {
+         button.addEventListener('click',processInput, false);
+      } else if (button.attachEvent) {
+         button.attachEvent('onclick', processInput);
+      }
+   </script>
+</body>
+</html>
